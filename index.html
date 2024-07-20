@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="page-header">
+      <h1>Your library</h1>
+      <button id="new" class="button button--medium button--brand">New book</button>
+    </header>
+    <ul id="books" class="book-list"></ul>
+    <dialog id="new-book-dialog">
+      <form id="book-form" class="book-form">
+        <p>
+          <label for="title">Title</label>
+          <input id="title" type="text" name="title" required />
+        </p>
+        <p>
+          <label for="author">Author</label>
+          <input id="author" type="text" name="author" required />
+        </p>
+        <p>
+          <label for="pages">Pages</label>
+          <input id="pages" type="number" min="1" name="pages" required />
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="read" />
+            I have read this book
+          </label>
+        </p>
+        <div class="button-group">
+          <button value="cancel" formmethod="dialog" class="button button--medium button--subtle">Cancel</button>
+          <input type="submit" value="Save" class="button button--medium button--brand" />
+        </div>
+      </form>
+    </dialog>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
